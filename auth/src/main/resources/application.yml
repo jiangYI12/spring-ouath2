@@ -1,0 +1,26 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: auth
+  redis:
+    host: 192.168.147.128
+    port: 6379
+  datasource:
+    url: jdbc:mysql://localhost:3306/security_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    password: sdad23307216
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    com.auth.mapper:  debug
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
